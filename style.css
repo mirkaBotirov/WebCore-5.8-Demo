@@ -258,6 +258,7 @@ h1 {
    }
 
    .label-text {
+        display: block;
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
