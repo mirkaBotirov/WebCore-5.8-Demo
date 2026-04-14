@@ -12,38 +12,36 @@ body {
 
 .container {
     display: flex;
-    /* padding: 10px; */
-    /* margin: 24px 16px; */
     justify-content: space-around;
-    margin-top: 24px;
-    /* align-items: flex-start; */
+    padding: 24px;
 }
 
 .icon {
-    /* display: flex;
-    flex-direction: row; */
     width: 50px;
-    height: 50px;
+    height: auto;
 }
 
 .logo-group {
     width: 96.55px;
     height: 50.81px;
-    /* margin: 18.50px 6px 18.50px 6px; */
-    border: 0.5px;
+    /* border: 0.5px solid #6b7b84; */
     color: #6b7b84;
 }
 
+.divider-tablet {
+    display: none;
+}
+
 .divider {
-    /* display: flex; */
     width: 3px;
     height: 40px;
-    /* margin: 28px 6px 28px 8px; */
     background-color: #EAEAEA;
     border-radius: 3px;
-    /* justify-content: center;
-    flex-direction: column; */
+    padding-top: 28px;
+}
 
+.divider-tablet-two {
+    display: none;
 }
 
 .call-icon {
@@ -57,14 +55,14 @@ body {
 .profile-icon {
     display: none;
 }
+
+.label-text {
+    display: none;
+}
 /* ================Main Body ========================*/
 
 /* =============Mark and h1========================== */
 .main-container {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    /* align-content: space-around; */
     background-color: #F8F8F8;
 
 } 
@@ -116,17 +114,18 @@ h1 {
 }
 /* ==================Text======================== */
 .text {
-    margin: 30px 20px 80px 20px;
+    margin: 30px 20px 30px 20px;
     line-height: 1.5;
-    letter-spacing: 1.5;
+    letter-spacing: 1.5px;
     font-size: 18px;
     color: #1B1C21;
 }
 /* ===================Expand icon and read more============= */
 .small {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items: center; */
     margin-bottom: 40px;
 }
 
@@ -137,8 +136,154 @@ h1 {
 .read-more {
     font-size: 25px;
 }
+
+.read-more-container {
+    display: flex;
+    align-items: center;
+}
 /* =====================Main Photo============================ */
 .hero {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
+}
+
+/* ========================TABLET============================== */
+@media (min-width: 768px) {
+    .container {
+        gap: 16px;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .divider-tablet {
+        display: block;
+        width: 3px;
+        height: 40px;
+        background-color: #EAEAEA;
+    }
+
+    .logo-group {
+        margin-right: auto;
+    }
+
+    .call-icon {
+        display: block;
+    }
+
+    .chat-icon {
+        display: block;
+    }
+
+    .profile-icon {
+        display: block;
+    }
+
+    .divider-tablet-two {
+        display: block;
+        width: 3px;
+        height: 40px;
+        background-color: #EAEAEA;
+    }
+
+    .header {
+        justify-content: flex-start;
+        padding: 20px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-around;
+        overflow-x: hidden;
+
+    }
+
+    .nav-item {
+        padding: 15px 30px 15px 15px;
+    }
+
+    .small-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .small {
+        flex-direction: column;
+    }
+
+    .hero {
+        height: 270px;
+        width: auto;
+        border-radius: 10px;
+    }
+}
+/* ===========================DESKTOP============================= */
+@media (min-width: 1024px) {
+   .call-icon {
+        display: none;
+   }
+
+   .chat-icon {
+        display: none;
+   }
+
+   .profile-icon {
+        display: none;
+   }
+
+   .logo-group {
+        display: none;
+   }
+
+   .menu-icon {
+        display: none;
+   }
+
+   .divider-tablet {
+        display: none;
+   }
+
+   .divider-tablet-two {
+        display: none;
+   }
+
+   .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        background-color: #F8F8F8;
+   }
+
+   .label-text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+   }
+
+   .repair-icon {
+        margin-right: 50px;
+   }
+
+   .most-main-container {
+        position: relative;
+   }
+
+   .header {
+        /* align-items: flex-start; */
+        position: absolute;
+        top: -25px;
+        left: 0;
+   }
+
+   .hero {
+        margin-right: 25px;
+   }
+
+    .small-container {
+        margin-top: 38px;
+    }
+
 }
